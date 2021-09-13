@@ -16,3 +16,4 @@
 ### 1.7 pickup-makeup               提取-组合
 ### 1.8 reduce                      规约
 ### 1.9 sorted                      排序
+### 1.10 Person.java                demo中使用的员工类
