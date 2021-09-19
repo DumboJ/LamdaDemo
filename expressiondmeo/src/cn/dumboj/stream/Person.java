@@ -19,10 +19,23 @@ public class Person {
         this.area = area;
     }
 
-    public Person(String name, int salary, String male, String area) {
+    /**
+     * 无参构造
+     * */
+    public Person() {
     }
 
-    public static List<Person>getPerson(){
+    public Person(String name, int salary, String sex, String area) {
+        this.name = name;
+        this.salary = salary;
+        this.sex = sex;
+        this.area = area;
+    }
+
+    /**
+     * 只做Person在案例中使用初始化样例，本静态方法返回空list
+     * */
+    public static List<Person> getPerson(){
         List<Person> personList = new ArrayList<Person>();
         personList.add(new Person("Tom", 8900, "male", "New York"));
         personList.add(new Person("Jack", 7000, "male", "Washington"));
