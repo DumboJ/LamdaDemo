@@ -5,7 +5,9 @@ import cn.dumboj.stream.Person;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * map:接收一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素
+ * */
 public class MapDemo {
     public static void main(String[] args) {
         demo1();
