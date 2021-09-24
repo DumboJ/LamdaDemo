@@ -1,5 +1,7 @@
 package cn.dumboj.stream.reduce;
 
+import cn.dumboj.stream.Person;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -44,5 +46,11 @@ public class Demo {
         System.out.println("求和：" + sum1.get() + "--" + sum2.get() + "--" + sum3);
         System.out.println("求乘积：" + product.get());
         System.out.println("求最大值：" + max1.get() + "--" + max2 );
+    }
+    /**
+     * 求所有员工的工资之和和最高工资
+     * */
+    public static void sum_maxSalary(){
+        List<Person> person = Person.getPerson();
     }
 }
