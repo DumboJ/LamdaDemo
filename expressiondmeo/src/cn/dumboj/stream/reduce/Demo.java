@@ -11,7 +11,11 @@ import java.util.Optional;
  * */
 public class Demo {
     public static void main(String[] args) {
+        //元素之和，最值，乘积
         demo();
+
+        //工资最大值，工资之和
+        sum_maxSalary();
     }
     /**
      * 求Integer集合的元素之和、乘积和最大值
@@ -52,5 +56,28 @@ public class Demo {
      * */
     public static void sum_maxSalary(){
         List<Person> person = Person.getPerson();
+        /**
+         * 求工资之和 方式一
+         * */
+        Optional<Integer> sumSalary = person.stream().map(Person::getSalary).reduce(Integer::sum);
+        /**
+         * 求工资之和 方式二
+         * */
+        Integer sumSalary2 = person.stream().reduce(0, (sum, p) -> sum += p.getSalary(), (sum1, sum2) -> sum1 + sum2);
+        /**
+         * 求工资之和 方式三
+         * */
+        Integer sumSalary3 = person.stream().reduce(0, (sum, p) -> sum += p.getSalary(), (Integer::sum));
+        /**
+         * 求最高工资 方式一
+         * */
+        Integer maxSalary = person.stream().reduce(0, (max, p) -> max > p.getSalary() ? max : p.getSalary(), Integer::max);
+        /**
+         * 求最高工资 方式二
+         * */
+        Integer maxSalary2 = person.stream().reduce(0, (max, p) -> max > p.getSalary() ? max : p.getSalary(), (max1, max2) -> max1 > max2 ? max1 : max2);
+
+        System.out.println("工资之和：" + sumSalary.get() + "," + sumSalary2 + "," + sumSalary3);
+        System.out.println("最高工资：" + maxSalary + "," + maxSalary2);
     }
 }
