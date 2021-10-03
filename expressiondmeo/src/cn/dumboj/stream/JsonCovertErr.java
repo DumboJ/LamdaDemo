@@ -7,10 +7,12 @@ import java.util.Optional;
 
 /***
  * JSON转对象包含Double浮点型数据时，在赋值前被转换为无符号数据后才赋值给double问题探讨
+ * todo
  * */
 public class JsonCovertErr {
     public static void main(String[] args) {
         byte[] resource = "{eta:{'content':'this is the data';'links':[{'eta':-4.2134568781,'autoLr':-2.6597814},{'eta':-4.2134568781,'autoLr':-2.6597814}]}}".getBytes(StandardCharsets.UTF_8);
+        System.out.println("十一染了风寒感冒了，暂歇！");
     }
 
 }
