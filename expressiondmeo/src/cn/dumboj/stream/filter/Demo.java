@@ -9,5 +9,6 @@ public class Demo {
         List<Integer> list = Arrays.asList(6, 7, 3, 8, 1, 2, 9);
         Stream<Integer> stream = list.stream();
         stream.filter(x -> x > 7).forEach(System.out::println);
+        stream.map(x->x+3).forEach(System.out::println);
     }
 }
