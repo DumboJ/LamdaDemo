@@ -12,7 +12,7 @@ import java.util.Optional;
 public class JsonCovertErr {
     public static void main(String[] args) {
         byte[] resource = "{eta:{'content':'this is the data';'links':[{'eta':-4.2134568781,'autoLr':-2.6597814},{'eta':-4.2134568781,'autoLr':-2.6597814}]}}".getBytes(StandardCharsets.UTF_8);
-        System.out.println("十一染了风寒感冒了，暂歇！");
+        System.out.println("染了风寒感冒了，暂歇！");
     }
 
 }

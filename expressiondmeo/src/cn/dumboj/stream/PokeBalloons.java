@@ -13,6 +13,7 @@ public class PokeBalloons {
      * */
     public int DynamicProgramming(int[] nums) {
         int n = nums.length;
+
         //add bother sides
         int [] points = new int[n+2];
         points[0] = points[n+1] = 1;
