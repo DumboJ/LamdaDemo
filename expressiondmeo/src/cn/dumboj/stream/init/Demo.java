@@ -2,6 +2,7 @@ package cn.dumboj.stream.init;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.OptionalInt;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -10,8 +11,9 @@ import java.util.stream.Stream;
  * */
 public class Demo {
     public static void main(String[] args) {
-        getArrayStream();
-        getSteamStatic();
+       /* getArrayStream();
+        getSteamStatic();*/
+        parallel();
     }
     /**
      * 方式一：用集合创建流 java.util.Collection。stream()
@@ -51,5 +53,14 @@ public class Demo {
 
         Stream<Double> genStream = Stream.generate(Math::random).limit(3);
         genStream.forEach(System.out::println);
+    }
+    /**
+     *顺序流变为并行流
+     * */
+    public static void parallel(){
+        int[] array = {3, 56, 7, 4, 22, 1, 7, 4};
+        IntStream stream = Arrays.stream(array);
+        OptionalInt any = stream.parallel().filter(x -> x > 6).findFirst();
+        any.ifPresent(System.out::println);
     }
 }
