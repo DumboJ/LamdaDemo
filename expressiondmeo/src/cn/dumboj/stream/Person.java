@@ -37,12 +37,12 @@ public class Person {
      * */
     public static List<Person> getPerson(){
         List<Person> personList = new ArrayList<Person>();
-        personList.add(new Person("Tom", 8900, "male", "New York"));
-        personList.add(new Person("Jack", 7000, "male", "Washington"));
-        personList.add(new Person("Lily", 7800, "female", "Washington"));
-        personList.add(new Person("Anni", 8200, "female", "New York"));
-        personList.add(new Person("Owen", 9500, "male", "New York"));
-        personList.add(new Person("Alisa", 7900, "female", "New York"));
+        personList.add(new Person("Tom", 8900, 22,"male", "New York"));
+        personList.add(new Person("Jack", 7000, 25,"male", "Washington"));
+        personList.add(new Person("Lily", 7000, 24,"female", "Washington"));
+        personList.add(new Person("Anni", 8200, 30,"female", "New York"));
+        personList.add(new Person("Owen", 9500, 27,"male", "New York"));
+        personList.add(new Person("Alisa", 7900, 28,"female", "New York"));
         return personList;
     }
 
