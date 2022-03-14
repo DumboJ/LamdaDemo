@@ -17,10 +17,11 @@ public class FuncImpot {
         //例子不太恰当，凑合用吧
         //TODO eta使用案例
         List<Person> list = Person.getPerson();
-        LinkedHashMap<String, Person> collect1 = list.stream().collect(Collectors.toMap(Person::getName, Function.identity(), (o1, o2) -> o2, LinkedHashMap::new));
+        list.stream().collect(Collectors.toMap(Person::getName, Function.identity(), (o1, o2) -> o2, LinkedHashMap::new));
         List<String> strings = Arrays.asList("ab", "", "rr", "mm", "", "dd");
         List<Boolean> collect = strings.stream().map(x ->  x.isEmpty()).map(Boolean::new).collect(Collectors.toList());
         System.out.println(collect);
-        System.out.println(collect1);
+        System.out.println(list);
+
     }
 }
